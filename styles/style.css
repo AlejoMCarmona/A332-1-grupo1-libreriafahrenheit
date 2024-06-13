@@ -62,3 +62,22 @@ body {
     width: 75%;
     border-radius: 1.5rem;
 }
+
+#cuadro-historia{
+    background: linear-gradient(90deg, rgba(75,147,103,1) 0%, rgba(64,156,46,1) 100%);
+    width: 75%;
+    border-radius: 1.5rem;  
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Clase para aplicar la animación */
+.fade-in {
+    animation: fadeIn 2s ease-in-out; /* Duración de 2 segundos */
+}
