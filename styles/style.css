@@ -4,6 +4,7 @@
     --color-terciario: #495867;
     --color-fondo: #F7F7FF;
     --fuente-principal: "Merriweather", serif;
+    --fuente-secundaria: "Lora", serif;
 }
 
 /************* ESTILOS GLOBALES *************/
@@ -21,7 +22,7 @@ nav {
 
 .searchbar {
     color: var(--color-terciario);
-    font-family: var(--fuente-principal);
+    font-family: var(--fuente-secundaria);
     font-weight: 500;
 }
 
