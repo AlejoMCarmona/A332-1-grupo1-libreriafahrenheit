@@ -72,8 +72,13 @@ form {
   font-weight: 300;
 }
 table {
-  width: 100%;
+  width: 50%;
   border-collapse: collapse;
+}
+table, h3{
+  text-align: center;
+  color: var(--color-principal);
+
 }
 td {
   padding: 1rem;
