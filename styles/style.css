@@ -1,61 +1,108 @@
 :root {
-    --color-principal: #0C8346;
-    --color-secundario: #F7C548;
-    --color-terciario: #495867;
-    --color-fondo: #F7F7FF;
-    --fuente-principal: "Cinzel", serif;
-    --fuente-secundaria: "Lora", serif;
+  --color-principal: #0c8346;
+  --color-secundario: #f7c548;
+  --color-terciario: #495867;
+  --color-fondo: #f7f7ff;
+  --fuente-principal: "Cinzel", serif;
+  --fuente-secundaria: "Lora", serif;
 }
 
 /************* ESTILOS GLOBALES *************/
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
-input:focus, textarea:focus{
-    box-shadow: none !important;
+input:focus,
+textarea:focus {
+  box-shadow: none !important;
 }
 
 /************* ESTILOS PARA EL NAVBAR *************/
 nav {
-    background-color: var(--color-principal);
+  background-color: var(--color-principal);
 }
 
 .searchbar {
-    color: var(--color-terciario);
-    font-family: var(--fuente-secundaria);
-    font-weight: 500;
+  color: var(--color-terciario);
+  font-family: var(--fuente-secundaria);
+  font-weight: 500;
 }
 
 .navbar-items {
-    border-top: .1rem solid #359766;
+  border-top: 0.1rem solid #359766;
 }
 .link-item {
-    font-family: var(--fuente-principal);
-    font-weight: 300;
-    color: var(--color-fondo);
+  font-family: var(--fuente-principal);
+  font-weight: 300;
+  color: var(--color-fondo);
 }
 
 .bi-book-half {
-    font-size: 2.3rem;
-    padding: 3rem;
-    background-color: var(--color-secundario);
-    color: var(--color-fondo);
+  font-size: 2.3rem;
+  padding: 3rem;
+  background-color: var(--color-secundario);
+  color: var(--color-fondo);
 }
 .bi-person,
 .bi-cart4,
 .bi-list {
-    font-size: 2.2rem;
-    color: var(--color-fondo);
+  font-size: 2.2rem;
+  color: var(--color-fondo);
 }
 .bi-search {
-    color: var(--color-principal);
-    font-size: 1.3rem;
+  color: var(--color-principal);
+  font-size: 1.3rem;
 }
 
 .rounded-pill-start {
-    border-radius: 6.25rem 0rem 0rem 6.25rem;
+  border-radius: 6.25rem 0rem 0rem 6.25rem;
 }
 .rounded-pill-end {
-    border-radius: 0rem 6.25rem 6.25rem 0rem;
+  border-radius: 0rem 6.25rem 6.25rem 0rem;
 }
 /************* FIN DE LOS ESTILOS PARA EL NAVBAR *************/
+
+/************* ESTILOS PARA SECCION MERCH ********************/
+
+#merch {
+  background-color: #f7f7ff;
+}
+
+#merch .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border: 2px solid transparent;
+}
+
+#merch .card-body {
+  flex: 1;
+}
+
+#merch .card img {
+  width: auto;
+  height: 226px;
+  object-fit: cover;
+}
+
+#merch h1 {
+  text-align: center;
+  font-family: var(--fuente-principal);
+  color: var(--color-principal);
+}
+
+#merch .card h5 {
+  font-family: var(--fuente-principal);
+  color: var(--color-principal);
+}
+
+#merch .card h6 {
+  font-family: var(--fuente-secundaria);
+  color: var(--color-terciario);
+  font-weight: bold;
+}
+
+#merch .card p {
+  font-family: var(--fuente-secundaria);
+  color: var(--color-terciario);
+}
