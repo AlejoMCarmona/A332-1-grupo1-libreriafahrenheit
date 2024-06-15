@@ -3,4 +3,58 @@
     --color-secundario: #F7C548;
     --color-terciario: #495867;
     --color-fondo: #F7F7FF;
+    --fuente-principal: "Merriweather", serif;
 }
+
+/************* ESTILOS GLOBALES *************/
+a {
+    text-decoration: none;
+}
+input:focus, textarea:focus{
+    box-shadow: none !important;
+}
+
+/************* ESTILOS PARA EL NAVBAR *************/
+nav {
+    background-color: var(--color-principal);
+}
+
+.searchbar {
+    color: var(--color-terciario);
+    font-family: var(--fuente-principal);
+    font-weight: 500;
+}
+
+.navbar-items {
+    border-top: .1rem solid #359766;
+}
+.link-item {
+    font-family: var(--fuente-principal);
+    font-weight: 300;
+    color: var(--color-fondo);
+}
+
+.bi-book-half {
+    font-size: 2.3rem;
+    padding: 3rem;
+    background-color: var(--color-secundario);
+    color: var(--color-fondo);
+}
+.bi-person,
+.bi-cart4,
+.bi-list {
+    font-size: 2.2rem;
+    color: var(--color-fondo);
+}
+.bi-search {
+    color: var(--color-principal);
+    font-size: 1.3rem;
+}
+
+.rounded-pill-start {
+    border-radius: 6.25rem 0rem 0rem 6.25rem;
+}
+.rounded-pill-end {
+    border-radius: 0rem 6.25rem 6.25rem 0rem;
+}
+/************* FIN DE LOS ESTILOS PARA EL NAVBAR *************/
