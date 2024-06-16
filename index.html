@@ -12,54 +12,50 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Lora:ital,wght@0,400..700;1,400..700&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <nav class="navbar-nav navbar-expand-lg pt-4">
+        <nav class="navbar-nav navbar-expand-md pt-4">
             <div class="container-fluid">
                 <div class="row align-items-center">
-                    <div class="container col-lg-1 col-12 text-center">
+                    <div class="container col-md-1 col-12 text-center">
                         <a href="#" class="navbar-brand">
-                            <i class="bi bi-book-half rounded-circle p-3"></i>
+                            <i class="bi bi-book-half rounded-circle fs-md-1 fs-3 p-3"></i>
                         </a>
                     </div>
     
-                    <div class="col-lg-8 col-12 mt-lg-0 mt-4">
-                        <div class="w-lg-75 w-100 mx-auto input-group" role="search">
-                            <input class="form-control searchbar rounded-pill-start py-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
+                    <div class="col-md-8 col-12 mt-md-0 mt-4">
+                        <div class="w-md-75 w-100 mx-auto input-group" role="search">
+                            <input class="form-control searchbar rounded-pill-start py-md-2 py-1" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
                             <span>
-                                <button class="btn bg-white border-start-0 border py-2 rounded-pill-end" type="button">
+                                <button class="btn bg-white border-start-0 border py-md-2 py-1 rounded-pill-end" type="button">
                                     <i class="bi bi-search"></i>
                                 </button>
                             </span>
                         </div>
                     </div>
     
-                    <a href="#" class="col-lg-1 col-4 text-lg-end text-center">
-                        <i class="bi bi-person"></i>
+                    <a href="#" class="col-md-1 col-4 text-md-end text-center">
+                        <i class="bi bi-person fs-md-1 fs-2"></i>
                     </a>
     
                     <a class="navbar-toggler col-4 text-center" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="bi bi-list"></i>
+                        <i class="bi bi-list fs-md-1 fs-2"></i>
                     </a>
 
-                    <a href="#" class="col-lg-1 col-4 text-lg-start text-center">
-                        <i class="bi bi-cart4"></i>
+                    <a href="#" class="col-md-1 col-4 text-md-start text-center">
+                        <i class="bi bi-cart4 fs-md-1 fs-2"></i>
                     </a>
     
                 </div>
-    
-                <div class="row">
 
-                </div>
-
-                <div class="row justify-content-center text-center p-2 navbar-items collapse navbar-collapse mt-lg-4" id="navbarSupportedContent">
-                    <div class="col-lg-2 col-12 nav-item"><a href="#" class="nav-link link-item">GÉNEROS</a></div>
-                    <div class="col-lg-2 col-12 nav-item"><a href="#" class="nav-link link-item">QUIÉNES SOMOS</a></div>
-                    <div class="col-lg-2 col-12 nav-item"><a href="#" class="nav-link link-item">MERCHANDISING</a></div>
-                    <div class="col-lg-2 col-12 nav-item"><a href="#" class="nav-link link-item">PREGUNTAS FRECUENTES</a></div>
+                <div class="row justify-content-md-between justify-content-center text-center p-2 navbar-items collapse navbar-collapse mt-md-4" id="navbarSupportedContent">
+                    <div class="col-md-2 col-12 nav-item"><a href="#" class="nav-link link-item">GÉNEROS</a></div>
+                    <div class="col-md-2 col-12 nav-item"><a href="#" class="nav-link link-item">QUIÉNES SOMOS</a></div>
+                    <div class="col-md-2 col-12 nav-item"><a href="#" class="nav-link link-item">MERCHANDISING</a></div>
+                    <div class="col-md-2 col-12 nav-item"><a href="#" class="nav-link link-item">PREGUNTAS FRECUENTES</a></div>
                 </div>
             </div>
              
@@ -68,10 +64,49 @@
 
     <main>
         <section id="homepage">
+            <div class="container-fluid d-flex">
+                <div class="row"> 
+                    <div class="order-lg-last col-lg-6 col-12 p-0">
+                        <img src="images/homepage-image.jpg"  class="img-fluid" alt="Imagen promocional del día del padre">
+                    </div>
+                    <div class="order-lg-first col-lg-6 col-12 p-0 p-lg-0 p-5 bg-custom-black d-flex flex-row align-items-center justify-content-center">
+                        <div id="mensaje-promocional">
+                            <h2>DÍA DEL PADRE</h2>
+                            <p class="fw-bold m-0 p-0">Regalale a papá la mayor de las aventuras.</p>
+                            <p class="m-0 p-0">¿El ticket? Uno de nuestros libros.</p>
+                            <button type="button" class="btn custom-btn mt-3 p-2">VIAJÁ HOY</button>
+                        </div>
+                    </div>
+                </div>
 
+            </div>
         </section>
-        <section id="informacion-compras">
+        <section id="informacion-compras" class="mt-4">
+            <div class="d-flex flex-md-row flex-column justify-content-evenly">
 
+                <div class="d-flex flex-column item-compra">
+                    <i class="bi bi-credit-card-2-front text-center fs-1""></i>
+                    <div class="info w-100 mx-auto my-2">
+                        <h3 class="fs-2 text-md-start text-center">Cuotas sin interés</h3>
+                        <p class="text-md-start text-center">Accedé a este beneficio exclusivo para compras online.</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-column item-compra">
+                    <i class="bi bi-gift text-center fs-1""></i>
+                    <div class="info w-100 mx-auto my-2">
+                        <h3 class="fs-2 text-md-start text-center">Gift card</h3>
+                        <p class="text-md-start text-center">De regalo al registrar tu usuario y hacer tu primera compra.</p>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column item-compra">
+                    <i class="bi bi-bicycle text-center fs-1""></i>
+                    <div class="info w-100 mx-auto my-2">
+                        <h3 class="fs-2 text-md-start text-center">Envíos gratis</h3>
+                        <p class="text-md-start text-center">En tu primera compra o en aquellas mayores a $50.000.</p>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="novedades">
             

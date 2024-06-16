@@ -5,6 +5,7 @@
     --color-fondo: #F7F7FF;
     --fuente-principal: "Cinzel", serif;
     --fuente-secundaria: "Lora", serif;
+    --fuente-terciaria: "Quattrocento", serif;
 }
 
 /************* ESTILOS GLOBALES *************/
@@ -36,7 +37,6 @@ nav {
 }
 
 .bi-book-half {
-    font-size: 2.3rem;
     padding: 3rem;
     background-color: var(--color-secundario);
     color: var(--color-fondo);
@@ -44,7 +44,6 @@ nav {
 .bi-person,
 .bi-cart4,
 .bi-list {
-    font-size: 2.2rem;
     color: var(--color-fondo);
 }
 .bi-search {
@@ -59,3 +58,64 @@ nav {
     border-radius: 0rem 6.25rem 6.25rem 0rem;
 }
 /************* FIN DE LOS ESTILOS PARA EL NAVBAR *************/
+
+/************* ESTILOS PARA EL HOMEPAGE *************/
+.bg-custom-black {
+    background-color: #070707;
+}
+
+#mensaje-promocional > h2 {
+    color: var(--color-secundario);
+    font-family: var(--fuente-principal);
+    font-weight: 900;
+}
+#mensaje-promocional > p {
+    color: var(--color-fondo);
+}
+#mensaje-promocional > p:nth-child(1) {
+    font-family: var(--fuente-terciaria);
+}
+#mensaje-promocional > p:nth-child(2) {
+    font-family: var(--fuente-secundaria);
+}
+
+.custom-btn {
+    background-color: var(--color-secundario);
+    color: #495867;
+    font-weight: bold;
+}
+.custom-btn:hover {
+    background-color: #eeaf10;
+}
+
+/************* FIN DE LOS ESTILOS PARA EL HOMEPAGE *************/
+
+/************* ESTILOS PARA LA INFORMACIÓN DE COMPRAS *************/
+.item-compra > .info > h3 {
+    color: var(--color-secundario);
+    font-family: var(--fuente-terciaria);
+}
+.item-compra > .info > p {
+    color: var(--color-terciario);
+    font-family: var(--fuente-secundaria);
+}
+
+.bi-gift,
+.bi-credit-card-2-front,
+.bi-bicycle {
+    color: var(--color-secundario);
+}
+
+.info {
+    border-left: .8rem solid var(--color-secundario);
+    padding: 1rem;
+}
+@media screen and (max-width: 768px) {
+    .info {
+        border-left: .8rem solid var(--color-secundario);
+        border-right: .8rem solid var(--color-secundario);
+        padding: 1rem;
+    }
+  }
+
+/************* FIN DE LOS ESTILOS PARA LA INFORMACIÓN DE COMPRAS *************/
