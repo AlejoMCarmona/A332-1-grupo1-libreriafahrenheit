@@ -15,6 +15,7 @@ a {
 input:focus, textarea:focus{
     box-shadow: none !important;
 }
+/************* FIN DE ESTILOS GLOBALES *************/
 
 /************* ESTILOS PARA EL NAVBAR *************/
 nav {
