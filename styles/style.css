@@ -130,26 +130,18 @@ nav {
 
 /*************ESTILOS PARA SECCION NOVEDADES *****************/
 
-#mainNovedades {
+#novedades {
     background-color: var(--color-terciario);
-    display: grid;
-    align-items: center;
-    margin: auto;
 }
 
-#tituloNovedades>p{
+#tituloNovedades {
     color: var(--color-secundario);
     font-family: var(--fuente-principal);
-    display: block;
-    text-align: center;
-    font-size: 3.5rem;
-    padding: 1.5rem;
 }
 
 #cardsNovedades{
     padding: 0;
     margin: auto;
-
 }
 
 .card {
