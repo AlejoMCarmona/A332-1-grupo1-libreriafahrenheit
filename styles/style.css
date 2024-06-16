@@ -6,6 +6,7 @@
     --fuente-principal: "Cinzel", serif;
     --fuente-secundaria: "Lora", serif;
     --fuente-terciaria: "Quattrocento", serif;
+    --fuente-terciaria: "Quattrocento", serif;
 }
 
 /************* ESTILOS GLOBALES *************/
@@ -16,6 +17,11 @@ input:focus, textarea:focus{
     box-shadow: none !important;
 }
 /************* FIN DE ESTILOS GLOBALES *************/
+
+body {
+    margin: 0;
+    padding: 0;
+}
 
 /************* ESTILOS PARA EL NAVBAR *************/
 nav {
@@ -120,3 +126,77 @@ nav {
   }
 
 /************* FIN DE LOS ESTILOS PARA LA INFORMACIÓN DE COMPRAS *************/
+
+
+/*************ESTILOS PARA SECCION NOVEDADES *****************/
+
+#mainNovedades {
+    background-color: var(--color-terciario);
+    display: grid;
+    align-items: center;
+    margin: auto;
+}
+
+#tituloNovedades>p{
+    color: var(--color-secundario);
+    font-family: var(--fuente-principal);
+    display: block;
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 1.5rem;
+}
+
+#cardsNovedades{
+    padding: 0;
+    margin: auto;
+
+}
+
+.card {
+    --bs-card-bg: var(--color-terciario);
+    --bs-card-border-color: none;
+}
+
+.card-title{
+    color: var(--color-secundario);
+    font-size: 1.25rem;
+    font-family: var(--fuente-principal);
+}
+
+.card-subtitle{
+    color: var(--color-fondo);
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: var(--fuente-terciaria);
+}
+
+.card-text{
+    color: var(--color-fondo);
+    font-size: 0.75rem;
+    font-family: var(--fuente-secundaria);
+}
+
+.imageContainer{
+    height: 225px;
+}
+.card-img-top{
+    max-width: 150px;
+    height: auto;
+}
+
+.btn-warning{
+    --bs-btn-font-family: var(--fuente-secundaria);
+
+    --bs-btn-color: var(--color-terciario);
+    --bs-btn-bg: var(--color-secundario);
+
+    --bs-btn-hover-color: var(--color-secundario);
+    --bs-btn-hover-bg: var(--color-terciario);
+
+    --bs-btn-padding-y: .20rem; 
+    --bs-btn-padding-x: .45rem; 
+    --bs-btn-font-size: .70rem;
+
+  }
+
+  /*************FIN ESTILOS PARA SECCION NOVEDADES *****************/
