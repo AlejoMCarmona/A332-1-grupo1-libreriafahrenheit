@@ -210,6 +210,7 @@ form {
 table {
   width: 100%;
   border-collapse: collapse;
+  background-color: var(--color-fondo);
 }
 table {
   text-align: center;
@@ -286,4 +287,17 @@ td {
   font-family: var(--fuente-principal);
   font-weight: bolder;
   color: var(--color-fondo);
+}
+
+/************* ESTILOS *************/
+.titulo-principal {
+  color: var(--color-principal);
+  font-family: var(--fuente-principal);
+}
+
+.pregunta {
+  font-family: var(--fuente-secundaria);
+}
+.respuesta {
+  font-family: var(--fuente-secundaria);
 }
