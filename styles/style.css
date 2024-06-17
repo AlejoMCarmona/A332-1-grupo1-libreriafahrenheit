@@ -5,6 +5,7 @@
   --color-fondo: #f7f7ff;
   --fuente-principal: "Cinzel", serif;
   --fuente-secundaria: "Lora", serif;
+  --fuente-terciaria: "Quattrocento", serif;
 }
 
 /************* ESTILOS GLOBALES *************/
@@ -14,6 +15,12 @@ a {
 input:focus,
 textarea:focus {
   box-shadow: none !important;
+}
+/************* FIN DE ESTILOS GLOBALES *************/
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 /************* ESTILOS PARA EL NAVBAR *************/
@@ -37,7 +44,6 @@ nav {
 }
 
 .bi-book-half {
-  font-size: 2.3rem;
   padding: 3rem;
   background-color: var(--color-secundario);
   color: var(--color-fondo);
@@ -45,7 +51,6 @@ nav {
 .bi-person,
 .bi-cart4,
 .bi-list {
-  font-size: 2.2rem;
   color: var(--color-fondo);
 }
 .bi-search {
@@ -61,61 +66,180 @@ nav {
 }
 /************* FIN DE LOS ESTILOS PARA EL NAVBAR *************/
 
-/************* ESTILOS PARA EL FORM *************/
-#contact{
-    display: flex;
-    justify-content: center;
+/************* ESTILOS PARA EL HOMEPAGE *************/
+.bg-custom-black {
+  background-color: #070707;
 }
+
+#mensaje-promocional > h2 {
+  color: var(--color-secundario);
+  font-family: var(--fuente-principal);
+  font-weight: 900;
+}
+#mensaje-promocional > p {
+  color: var(--color-fondo);
+}
+#mensaje-promocional > p:nth-child(1) {
+  font-family: var(--fuente-terciaria);
+}
+#mensaje-promocional > p:nth-child(2) {
+  font-family: var(--fuente-secundaria);
+}
+
+.custom-btn {
+  background-color: var(--color-secundario);
+  color: #495867;
+  font-weight: bold;
+}
+.custom-btn:hover {
+  background-color: #eeaf10;
+}
+
+/************* FIN DE LOS ESTILOS PARA EL HOMEPAGE *************/
+
+/************* ESTILOS PARA LA INFORMACIÓN DE COMPRAS *************/
+.item-compra > .info > h3 {
+  color: var(--color-secundario);
+  font-family: var(--fuente-terciaria);
+}
+.item-compra > .info > p {
+  color: var(--color-terciario);
+  font-family: var(--fuente-secundaria);
+}
+
+.bi-gift,
+.bi-credit-card-2-front,
+.bi-bicycle {
+  color: var(--color-secundario);
+}
+
+.info {
+  border-left: 0.8rem solid var(--color-secundario);
+  padding: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .info {
+    border-left: 0.8rem solid var(--color-secundario);
+    border-right: 0.8rem solid var(--color-secundario);
+    padding: 1rem;
+  }
+}
+
+/************* FIN DE LOS ESTILOS PARA LA INFORMACIÓN DE COMPRAS *************/
+
+/*************ESTILOS PARA SECCION NOVEDADES *****************/
+
+#novedades {
+  background-color: var(--color-terciario);
+}
+
+#tituloNovedades {
+  color: var(--color-secundario);
+  font-family: var(--fuente-principal);
+}
+
+#cardsNovedades {
+  padding: 0;
+  margin: auto;
+}
+
+.card {
+  --bs-card-bg: var(--color-terciario);
+  --bs-card-border-color: none;
+  width: 17rem;
+}
+
+.card-title {
+  color: var(--color-secundario);
+  font-size: 1.25rem;
+  font-family: var(--fuente-principal);
+}
+
+.card-subtitle {
+  color: var(--color-fondo);
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: var(--fuente-terciaria);
+}
+
+.card-text {
+  color: var(--color-fondo);
+  font-size: 0.75rem;
+  font-family: var(--fuente-secundaria);
+}
+
+.imageContainer {
+  height: 225px;
+}
+.card-img-top {
+  max-width: 150px;
+  height: auto;
+}
+
+.btn-warning {
+  --bs-btn-font-family: var(--fuente-secundaria);
+
+  --bs-btn-color: var(--color-terciario);
+  --bs-btn-bg: var(--color-secundario);
+
+  --bs-btn-hover-color: var(--color-secundario);
+  --bs-btn-hover-bg: var(--color-terciario);
+
+  --bs-btn-padding-y: 0.2rem;
+  --bs-btn-padding-x: 0.45rem;
+  --bs-btn-font-size: 0.7rem;
+}
+
+/*************FIN ESTILOS PARA SECCION NOVEDADES *****************/
+
+/************* ESTILOS PARA EL FORM *************/
+
+#contact {
+  display: flex;
+  justify-content: center;
+}
+#contact span {
+  color: var(--color-secundario);
+}
+
 form {
   width: 50%;
   font-family: var(--fuente-principal);
   font-weight: 300;
 }
 table {
-  width: 50%;
+  width: 100%;
   border-collapse: collapse;
 }
-table, h3{
+table {
   text-align: center;
   color: var(--color-principal);
-
 }
 td {
-  padding: 1rem;
   vertical-align: top;
   width: 50%;
+  padding: 0.5rem;
+  border: none;
 }
-.text_box {
-  border-radius: 2rem;
-  border-color: var(--color-secundario);
-}
-.labels-form{
-  
+.labels-form {
   text-align: right;
   color: var(--color-principal);
   width: 100%;
   padding: 0.5rem;
   box-sizing: border-box;
-}
-strong {
-  color: var(--color-secundario);
-}
-
-table {
-  width: 100%;
-}
-td {
-  padding: 0.5rem;
-  vertical-align: top; 
-  border: none;
+  font-family: var(--fuente-terciaria);
 }
 
 .text_box {
+  border-radius: 2rem;
+  border-color: var(--color-secundario);
+  font-family: var(--fuente-secundaria);
+  color: var(--color-terciario);
   width: 100%;
   padding: 2px 2px 2px 10px;
   box-sizing: border-box;
 }
-button {
+#button-form {
   padding: 0.3rem 1rem;
   background-color: var(--color-secundario);
   color: var(--color-principal);
@@ -127,26 +251,39 @@ button {
   border-radius: 2rem;
   transition: background-color 0.3s ease;
 }
-button:hover {
-    background-color: var(--color-principal);
-    color: var(--color-secundario);
+#button-form:hover {
+  background-color: var(--color-principal);
+  color: var(--color-secundario);
 }
 
 .table-responsive {
-    width: 100%;
+  width: 100%;
 }
 @media (max-width: 767.98px) {
-    .table-responsive td {
-        display: block;
-        width: 100%;
-    }
-    .table-responsive td label {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    .table-responsive td input, .table-responsive td button {
-        margin-bottom: 10px;
-    }
+  .table-responsive td {
+    display: block;
+    width: 100%;
+  }
+  .table-responsive td label {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .table-responsive td input,
+  .table-responsive td button {
+    margin-bottom: 10px;
+  }
 }
 
 /************* FIN DE LOS ESTILOS PARA EL FORM *************/
+
+/************* ESTILOS PARA EL FOOTER *************/
+
+#footer {
+  background-color: var(--color-principal);
+}
+
+#footer h4 {
+  font-family: var(--fuente-principal);
+  font-weight: bolder;
+  color: var(--color-fondo);
+}
