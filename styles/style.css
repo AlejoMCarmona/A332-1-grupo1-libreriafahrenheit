@@ -290,7 +290,7 @@ td {
 }
 
 #footer h4 {
-  font-family: var(--fuente-principal);
+  font-family: var(--fuente-terciaria);
   font-weight: bolder;
   color: var(--color-fondo);
 }
