@@ -92,7 +92,7 @@ nav {
   font-weight: bold;
 }
 .custom-btn:hover {
-  background-color: #eeaf10;
+  background-color: var(--color-secundario);
 }
 
 /************* FIN DE LOS ESTILOS PARA EL HOMEPAGE *************/
@@ -201,7 +201,9 @@ nav {
 #contact span {
   color: var(--color-secundario);
 }
-
+#tituloRegistro{
+  color: var(--color-principal);
+}
 form {
   width: 50%;
   font-family: var(--fuente-principal);
