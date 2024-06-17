@@ -16,6 +16,12 @@ input:focus,
 textarea:focus {
   box-shadow: none !important;
 }
+/************* FIN DE ESTILOS GLOBALES *************/
+
+body {
+    margin: 0;
+    padding: 0;
+}
 
 /************* ESTILOS PARA EL NAVBAR *************/
 nav {
@@ -38,16 +44,14 @@ nav {
 }
 
 .bi-book-half {
-  font-size: 2.3rem;
-  padding: 3rem;
-  background-color: var(--color-secundario);
-  color: var(--color-fondo);
+    padding: 3rem;
+    background-color: var(--color-secundario);
+    color: var(--color-fondo);
 }
 .bi-person,
 .bi-cart4,
 .bi-list {
-  font-size: 2.2rem;
-  color: var(--color-fondo);
+    color: var(--color-fondo);
 }
 .bi-search {
   color: var(--color-principal);
@@ -61,6 +65,134 @@ nav {
   border-radius: 0rem 6.25rem 6.25rem 0rem;
 }
 /************* FIN DE LOS ESTILOS PARA EL NAVBAR *************/
+
+/************* ESTILOS PARA EL HOMEPAGE *************/
+.bg-custom-black {
+    background-color: #070707;
+}
+
+#mensaje-promocional > h2 {
+    color: var(--color-secundario);
+    font-family: var(--fuente-principal);
+    font-weight: 900;
+}
+#mensaje-promocional > p {
+    color: var(--color-fondo);
+}
+#mensaje-promocional > p:nth-child(1) {
+    font-family: var(--fuente-terciaria);
+}
+#mensaje-promocional > p:nth-child(2) {
+    font-family: var(--fuente-secundaria);
+}
+
+.custom-btn {
+    background-color: var(--color-secundario);
+    color: #495867;
+    font-weight: bold;
+}
+.custom-btn:hover {
+    background-color: #eeaf10;
+}
+
+/************* FIN DE LOS ESTILOS PARA EL HOMEPAGE *************/
+
+/************* ESTILOS PARA LA INFORMACIÓN DE COMPRAS *************/
+.item-compra > .info > h3 {
+    color: var(--color-secundario);
+    font-family: var(--fuente-terciaria);
+}
+.item-compra > .info > p {
+    color: var(--color-terciario);
+    font-family: var(--fuente-secundaria);
+}
+
+.bi-gift,
+.bi-credit-card-2-front,
+.bi-bicycle {
+    color: var(--color-secundario);
+}
+
+.info {
+    border-left: .8rem solid var(--color-secundario);
+    padding: 1rem;
+}
+@media screen and (max-width: 768px) {
+    .info {
+        border-left: .8rem solid var(--color-secundario);
+        border-right: .8rem solid var(--color-secundario);
+        padding: 1rem;
+    }
+  }
+
+/************* FIN DE LOS ESTILOS PARA LA INFORMACIÓN DE COMPRAS *************/
+
+
+/*************ESTILOS PARA SECCION NOVEDADES *****************/
+
+#novedades {
+    background-color: var(--color-terciario);
+}
+
+#tituloNovedades {
+    color: var(--color-secundario);
+    font-family: var(--fuente-principal);
+}
+
+#cardsNovedades{
+    padding: 0;
+    margin: auto;
+}
+
+.card {
+    --bs-card-bg: var(--color-terciario);
+    --bs-card-border-color: none;
+    width: 17rem;
+}
+
+.card-title{
+    color: var(--color-secundario);
+    font-size: 1.25rem;
+    font-family: var(--fuente-principal);
+}
+
+.card-subtitle{
+    color: var(--color-fondo);
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: var(--fuente-terciaria);
+}
+
+.card-text{
+    color: var(--color-fondo);
+    font-size: 0.75rem;
+    font-family: var(--fuente-secundaria);
+}
+
+.imageContainer{
+    height: 225px;
+}
+.card-img-top{
+    max-width: 150px;
+    height: auto;
+}
+
+.btn-warning{
+    --bs-btn-font-family: var(--fuente-secundaria);
+
+    --bs-btn-color: var(--color-terciario);
+    --bs-btn-bg: var(--color-secundario);
+
+    --bs-btn-hover-color: var(--color-secundario);
+    --bs-btn-hover-bg: var(--color-terciario);
+
+    --bs-btn-padding-y: .20rem; 
+    --bs-btn-padding-x: .45rem; 
+    --bs-btn-font-size: .70rem;
+
+  }
+
+  /*************FIN ESTILOS PARA SECCION NOVEDADES *****************/
 
 /************* ESTILOS PARA EL FOOTER *************/
 
