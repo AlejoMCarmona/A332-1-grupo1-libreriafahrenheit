@@ -198,9 +198,6 @@ nav {
 
 #footer {
   background-color: var(--color-principal);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
 
 #footer h4 {
