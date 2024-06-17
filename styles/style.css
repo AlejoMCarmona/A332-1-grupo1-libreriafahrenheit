@@ -12,16 +12,22 @@
 a {
   text-decoration: none;
 }
-input:focus,
-textarea:focus {
-  box-shadow: none !important;
-}
-/************* FIN DE ESTILOS GLOBALES *************/
 
 body {
   margin: 0;
   padding: 0;
 }
+
+input:focus,
+textarea:focus {
+  box-shadow: none !important;
+}
+
+.vh-85 {
+  height: 85vh;
+}
+
+/************* FIN DE ESTILOS GLOBALES *************/
 
 /************* ESTILOS PARA EL NAVBAR *************/
 nav {
@@ -127,7 +133,7 @@ nav {
 
 /************* FIN DE LOS ESTILOS PARA LA INFORMACIÓN DE COMPRAS *************/
 
-/*************ESTILOS PARA SECCION NOVEDADES *****************/
+/*************ESTILOS PARA SECCION NOVEDADES Y CARTAS DE LIBROS *****************/
 
 #novedades {
   background-color: var(--color-terciario);
@@ -143,26 +149,30 @@ nav {
   margin: auto;
 }
 
-#cardsNovedades .card {
+#cardsNovedades .card,
+#libros .card {
   --bs-card-bg: var(--color-terciario);
   --bs-card-border-color: none;
   width: 17rem;
 }
 
-#cardsNovedades .card-title {
+#cardsNovedades .card-title,
+#libros .card-title {
   color: var(--color-secundario);
   font-size: 1.25rem;
   font-family: var(--fuente-principal);
 }
 
-#cardsNovedades .card-subtitle {
+#cardsNovedades .card-subtitle,
+#libros .card-subtitle {
   color: var(--color-fondo);
   font-weight: bold;
   font-size: 1rem;
   font-family: var(--fuente-terciaria);
 }
 
-#cardsNovedades .card-text {
+#cardsNovedades .card-text,
+#libros .card-text {
   color: var(--color-fondo);
   font-size: 0.75rem;
   font-family: var(--fuente-secundaria);
@@ -171,12 +181,14 @@ nav {
 #cardsNovedades .imageContainer {
   height: 225px;
 }
-#cardsNovedades .card-img-top {
+#cardsNovedades .card-img-top,
+#libros .card-img-top {
   max-width: 150px;
   height: auto;
 }
 
-#cardsNovedades .btn-warning {
+#cardsNovedades .btn-warning,
+#libros .btn-warning {
   --bs-btn-font-family: var(--fuente-secundaria);
 
   --bs-btn-color: var(--color-terciario);
@@ -191,6 +203,91 @@ nav {
 }
 
 /*************FIN ESTILOS PARA SECCION NOVEDADES *****************/
+
+/************* ESTILOS PARA EL FORM *************/
+
+#registro {
+  display: flex;
+  justify-content: center;
+}
+#registro span {
+  color: var(--color-secundario);
+}
+
+form {
+  width: 50%;
+  font-family: var(--fuente-principal);
+  font-weight: 300;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-fondo);
+}
+table {
+  text-align: center;
+  color: var(--color-principal);
+}
+td {
+  vertical-align: top;
+  width: 50%;
+  padding: 0.5rem;
+  border: none;
+}
+.labels-form {
+  text-align: right;
+  color: var(--color-principal);
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  font-family: var(--fuente-terciaria);
+}
+
+.text_box {
+  border-radius: 2rem;
+  border-color: var(--color-secundario);
+  font-family: var(--fuente-secundaria);
+  color: var(--color-terciario);
+  width: 100%;
+  padding: 2px 2px 2px 10px;
+  box-sizing: border-box;
+}
+#button-form {
+  padding: 0.3rem 1rem;
+  background-color: var(--color-secundario);
+  color: var(--color-principal);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 2rem;
+  transition: background-color 0.3s ease;
+}
+#button-form:hover {
+  background-color: var(--color-principal);
+  color: var(--color-secundario);
+}
+
+.table-responsive {
+  width: 100%;
+}
+@media (max-width: 767.98px) {
+  .table-responsive td {
+    display: block;
+    width: 100%;
+  }
+  .table-responsive td label {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .table-responsive td input,
+  .table-responsive td button {
+    margin-bottom: 10px;
+  }
+}
+
+/************* FIN DE LOS ESTILOS PARA EL FORM *************/
 
 /************* ESTILOS PARA EL FOOTER *************/
 
@@ -258,3 +355,25 @@ nav {
   font-family: var(--fuente-secundaria);
   color: var(--color-terciario);
 }
+
+/************* ESTILOS PARA LA PÁGINA DE PREGUNTAS FRECUENTES *************/
+.titulo-principal {
+  color: var(--color-principal);
+  font-family: var(--fuente-principal);
+}
+
+.pregunta {
+  font-family: var(--fuente-secundaria);
+}
+.respuesta {
+  font-family: var(--fuente-secundaria);
+}
+
+/************* ESTILOS PARA LA PÁGINA DE LIBROS *************/
+.espacio-vacio {
+  width: 15rem;
+  height: 0;
+}
+
+/************* ESTILOS PARA LA PÁGINA DE LOGIN *************/
+
