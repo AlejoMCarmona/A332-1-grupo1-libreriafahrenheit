@@ -12,16 +12,22 @@
 a {
   text-decoration: none;
 }
-input:focus,
-textarea:focus {
-  box-shadow: none !important;
-}
-/************* FIN DE ESTILOS GLOBALES *************/
 
 body {
   margin: 0;
   padding: 0;
 }
+
+input:focus,
+textarea:focus {
+  box-shadow: none !important;
+}
+
+.vh-85 {
+  height: 85vh;
+}
+
+/************* FIN DE ESTILOS GLOBALES *************/
 
 /************* ESTILOS PARA EL NAVBAR *************/
 nav {
@@ -289,7 +295,7 @@ td {
   color: var(--color-fondo);
 }
 
-/************* ESTILOS *************/
+/************* ESTILOS PARA LA PÁGINA DE PREGUNTAS FRECUENTES *************/
 .titulo-principal {
   color: var(--color-principal);
   font-family: var(--fuente-principal);
@@ -302,9 +308,11 @@ td {
   font-family: var(--fuente-secundaria);
 }
 
-/* ESTILOS PAGINA LIBROS */
-
+/************* ESTILOS PARA LA PÁGINA DE LIBROS *************/
 .espacio-vacio {
-  width: 15rem; /*the width of the images in this example*/
-  height: 0; /*Important! for the divs to collapse should they fall in a new row*/
+  width: 15rem;
+  height: 0;
 }
+
+/************* ESTILOS PARA LA PÁGINA DE LOGIN *************/
+
