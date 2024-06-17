@@ -67,6 +67,22 @@ nav {
   background-color: #f7f7ff;
 }
 
+.carousel-item {
+  display: none;
+  transition: none;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+  display: block;
+  transition: transform 0.6s ease;
+}
+active {
+  display: flex;
+  justify-content: center;
+}
+
 #merch .card {
   height: 100%;
   display: flex;
@@ -112,9 +128,4 @@ nav {
 #merch .card p {
   font-family: var(--fuente-secundaria);
   color: var(--color-terciario);
-}
-
-#merch .link-success {
-  align-self: center;
-  text-align: center;
 }
