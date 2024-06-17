@@ -301,3 +301,10 @@ td {
 .respuesta {
   font-family: var(--fuente-secundaria);
 }
+
+/* ESTILOS PAGINA LIBROS */
+
+.espacio-vacio {
+  width: 15rem; /*the width of the images in this example*/
+  height: 0; /*Important! for the divs to collapse should they fall in a new row*/
+}
