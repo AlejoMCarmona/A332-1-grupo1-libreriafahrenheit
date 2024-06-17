@@ -194,11 +194,11 @@ nav {
 
 /************* ESTILOS PARA EL FORM *************/
 
-#contact {
+#registro {
   display: flex;
   justify-content: center;
 }
-#contact span {
+#registro span {
   color: var(--color-secundario);
 }
 
