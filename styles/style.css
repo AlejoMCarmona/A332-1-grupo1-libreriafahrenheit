@@ -1,20 +1,20 @@
 :root {
-    --color-principal: #0C8346;
-    --color-secundario: #F7C548;
-    --color-terciario: #495867;
-    --color-fondo: #F7F7FF;
-    --fuente-principal: "Cinzel", serif;
-    --fuente-secundaria: "Lora", serif;
-    --fuente-terciaria: "Quattrocento", serif;
-    --fuente-terciaria: "Quattrocento", serif;
+  --color-principal: #0c8346;
+  --color-secundario: #f7c548;
+  --color-terciario: #495867;
+  --color-fondo: #f7f7ff;
+  --fuente-principal: "Cinzel", serif;
+  --fuente-secundaria: "Lora", serif;
+  --fuente-terciaria: "Quattrocento", serif;
 }
 
 /************* ESTILOS GLOBALES *************/
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
-input:focus, textarea:focus{
-    box-shadow: none !important;
+input:focus,
+textarea:focus {
+  box-shadow: none !important;
 }
 /************* FIN DE ESTILOS GLOBALES *************/
 
@@ -25,22 +25,22 @@ body {
 
 /************* ESTILOS PARA EL NAVBAR *************/
 nav {
-    background-color: var(--color-principal);
+  background-color: var(--color-principal);
 }
 
 .searchbar {
-    color: var(--color-terciario);
-    font-family: var(--fuente-secundaria);
-    font-weight: 500;
+  color: var(--color-terciario);
+  font-family: var(--fuente-secundaria);
+  font-weight: 500;
 }
 
 .navbar-items {
-    border-top: .1rem solid #359766;
+  border-top: 0.1rem solid #359766;
 }
 .link-item {
-    font-family: var(--fuente-principal);
-    font-weight: 300;
-    color: var(--color-fondo);
+  font-family: var(--fuente-principal);
+  font-weight: 300;
+  color: var(--color-fondo);
 }
 
 .bi-book-half {
@@ -54,15 +54,15 @@ nav {
     color: var(--color-fondo);
 }
 .bi-search {
-    color: var(--color-principal);
-    font-size: 1.3rem;
+  color: var(--color-principal);
+  font-size: 1.3rem;
 }
 
 .rounded-pill-start {
-    border-radius: 6.25rem 0rem 0rem 6.25rem;
+  border-radius: 6.25rem 0rem 0rem 6.25rem;
 }
 .rounded-pill-end {
-    border-radius: 0rem 6.25rem 6.25rem 0rem;
+  border-radius: 0rem 6.25rem 6.25rem 0rem;
 }
 /************* FIN DE LOS ESTILOS PARA EL NAVBAR *************/
 
@@ -193,3 +193,18 @@ nav {
   }
 
   /*************FIN ESTILOS PARA SECCION NOVEDADES *****************/
+
+/************* ESTILOS PARA EL FOOTER *************/
+
+#footer {
+  background-color: var(--color-principal);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#footer h4 {
+  font-family: var(--fuente-principal);
+  font-weight: bolder;
+  color: var(--color-fondo);
+}
