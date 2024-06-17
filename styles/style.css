@@ -221,10 +221,6 @@ nav {
   display: block;
   transition: transform 0.6s ease;
 }
-active {
-  display: flex;
-  justify-content: center;
-}
 
 #merch .card {
   height: 100%;
