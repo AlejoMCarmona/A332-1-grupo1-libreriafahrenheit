@@ -290,29 +290,44 @@
                 </div>
             </div>
         </section>
-        <section id="registro" class="my-5">
-            <form action="#" method="post" class="container-md">
+        <section id="registro" class="mt-3 mb-4">
+            <form action="" method="post" class="container-md">
                 <div class="table-responsive">
                     <table class="table">
                         <tr>
+                            <h2 id="tituloRegistro" class="text-center fs-1 p-5">Registro</h2>
+                        </tr>
+                        <tr>
                             <td rowspan="2">
-                                <label for="name" class="labels-form">¿Querés formar parte de nuestra <span class="fw-bold">Comunidad</span>?</label>
+                                <label for="name" class="labels-form">¿Querés formar parte de nuestra <span
+                                        class="fw-bold">Comunidad</span>?</label>
                             </td>
                             <td>
-                                <input class="text_box" type="text" id="name" name="user_name" placeholder="Nombre" />
+                                <input class="text_box" type="text" id="name" name="user_name" placeholder="Nombre"
+                                    required />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input class="text_box" type="text" id="apellido" name="user_apellido" placeholder="Apellido" />
+                                <input class="text_box" type="text" id="apellido" name="user_apellido"
+                                    placeholder="Apellido" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <label for="mail" class="labels-form">¡Es muy sencillo! Creá tu usuario y reclamá tu
+                                    <span class="fw-bold">Gift Card.</span></label>
+                            </td>
+                            <td>
+                                <input class="text_box" type="email" id="mail" name="user_mail" placeholder="Email"
+                                    required />
                             </td>
                         </tr>
                         <tr>
                             <td rowspan="2">
-                                <label for="mail" class="labels-form">¡Es muy sencillo! Creá tu usuario y reclamá tu <span class="fw-bold">Gift Card.</span></label>
                             </td>
-                            <td>
-                                <input class="text_box" type="email" id="mail" name="user_mail" placeholder="Email" />
+                            <td class="pt-0">
+                                <input class="text_box" type="password" id="password" name="password" placeholder="Password" required />
                             </td>
                         </tr>
                         <tr>
@@ -344,7 +359,7 @@
                     <h4 class="fs-4">CONTACTO</h4>
                     <div class="nav flex-column">
                         <li class="nav-item mb-2">
-                            <a href="#">
+                            <a href="mailto:farenheit@gmail.com">
                                 <i class="bi bi-envelope text-white"> farenheit@gmail.com</i>
                             </a>
                         </li>
