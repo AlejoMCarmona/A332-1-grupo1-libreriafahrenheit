@@ -365,9 +365,11 @@ td {
 
 .pregunta {
   font-family: var(--fuente-secundaria);
+  color: var(--color-secundario);
 }
 .respuesta {
   font-family: var(--fuente-secundaria);
+  color: var(--color-principal);
 }
 
 /************* ESTILOS PARA LA PÁGINA DE LIBROS *************/
