@@ -1,3 +1,5 @@
+/************* VARIABLES *************/
+
 :root {
   --color-principal: #0c8346;
   --color-secundario: #f7c548;
@@ -7,6 +9,8 @@
   --fuente-secundaria: "Lora", serif;
   --fuente-terciaria: "Quattrocento", serif;
 }
+
+/************* FIN DE LAS VARIABLES *************/
 
 /************* ESTILOS GLOBALES *************/
 a {
@@ -133,7 +137,7 @@ nav {
 
 /************* FIN DE LOS ESTILOS PARA LA INFORMACIÓN DE COMPRAS *************/
 
-/*************ESTILOS PARA SECCION NOVEDADES Y CARTAS DE LIBROS *****************/
+/************* ESTILOS PARA LA DE SECCION NOVEDADES, CARDS DE LIBROS Y PÁGINA DE LOGIN  *****************/
 
 #novedades {
   background-color: var(--color-terciario);
@@ -188,7 +192,8 @@ nav {
 }
 
 #cardsNovedades .btn-warning,
-#libros .btn-warning {
+#libros .btn-warning,
+#login .btn-warning {
   --bs-btn-font-family: var(--fuente-secundaria);
 
   --bs-btn-color: var(--color-terciario);
@@ -373,10 +378,18 @@ td {
 }
 
 /************* ESTILOS PARA LA PÁGINA DE LIBROS *************/
+
 .espacio-vacio {
   width: 15rem;
   height: 0;
 }
 
+/************* FIN DE LOS ESTILOS PARA LA PÁGINA DE LIBROS *************/
+
 /************* ESTILOS PARA LA PÁGINA DE LOGIN *************/
 
+#login input {
+  font-family: var(--fuente-secundaria);
+}
+
+/************* FIN DE LOS ESTILOS PARA LA PÁGINA DE LOGIN *************/
