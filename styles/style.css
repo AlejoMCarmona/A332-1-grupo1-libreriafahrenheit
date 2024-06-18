@@ -310,7 +310,7 @@ td {
 /************* ESTILOS PARA SECCION MERCH ********************/
 
 #merch {
-  background-color: #f7f7ff;
+  background-color: var(--color-fondo);
 }
 
 .carousel-item {
