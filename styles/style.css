@@ -85,9 +85,11 @@ nav {
   color: var(--color-secundario);
   font-family: var(--fuente-principal);
   font-weight: 900;
+  font-size: 4rem;
 }
 #mensaje-promocional > p {
   color: var(--color-fondo);
+  font-size: 1.2rem;
 }
 #mensaje-promocional > p:nth-child(1) {
   font-family: var(--fuente-terciaria);
@@ -242,7 +244,7 @@ td {
 }
 .labels-form {
   text-align: right;
-  color: var(--color-principal);
+  color: var(--color-terciario);
   width: 100%;
   padding: 0.5rem;
   box-sizing: border-box;
@@ -325,6 +327,16 @@ td {
   transition: transform 0.6s ease;
 }
 
+.carousel-control-next,
+.carousel-control-prev {
+  width: 2rem;
+}
+
+.bi-caret-left-fill,
+.bi-caret-right-fill {
+  color: var(--color-principal);
+}
+
 #merch .card {
   height: 100%;
   display: flex;
@@ -363,6 +375,7 @@ td {
 }
 
 /************* ESTILOS PARA LA PÁGINA DE PREGUNTAS FRECUENTES *************/
+
 .titulo-principal {
   color: var(--color-principal);
   font-family: var(--fuente-principal);
@@ -370,11 +383,13 @@ td {
 
 .pregunta {
   font-family: var(--fuente-secundaria);
-  color: var(--color-secundario);
+  font-weight: bold;
+  color: var(--color-principal);
 }
+
 .respuesta {
   font-family: var(--fuente-secundaria);
-  color: var(--color-principal);
+  color: var(--color-terciario);
 }
 
 /************* ESTILOS PARA LA PÁGINA DE LIBROS *************/
