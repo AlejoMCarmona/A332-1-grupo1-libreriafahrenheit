@@ -3,17 +3,6 @@ const api_url_info = "https://openlibrary.org/search.json";
 //URL CON LA API DE LAS COVERS
 const api_covers = "https://covers.openlibrary.org/b/olid/";
 
-let q = "publish_year:2010";
-let fields ="title+author_name+cover_edition_key"
-let sort ="new"
-let lang ="spa"
-let limit ="20"
-
-const queryParams = `q=${q}` + '&' + `fields=${fields}` 
-                    + '&' + `sort=${sort}` + '&' + `language=${lang}` + '&' + `limit=${limit}`;
- 
-// Combinamos para tener la búsquedas
-const fullUrl = `${api_url_info}?${queryParams}`;
 
 //PARSEAR STRING A HTML 
 function fromHTML(html, trim = true) {
@@ -83,8 +72,6 @@ function cargar(param)
   });
 }
 
-cargar(fullUrl);
-
 function llamado(genero) 
 {
 
@@ -106,6 +93,35 @@ function llamado(genero)
 
 }
 
+
+let fields ="title+author_name+cover_edition_key";
+let sort ="new";
+let lang ="spa";
+let limit ="20";
+let q;
+
+const urlParams = new URLSearchParams(window.location.search);
+const busqueda = urlParams.get('q');
+
+if(typeof busqueda !== 'undefined' && busqueda !== null)
+{
+    q = busqueda;
+    q = q.replace(/\s/g, "+");
+    console.log(q);
+}
+else
+{
+    q = "publish_year:2010";
+    //let q = params;
+}
+
+const queryParams = `q=${q}` + '&' + `fields=${fields}` 
+                    + '&' + `sort=${sort}` + '&' + `language=${lang}` + '&' + `limit=${limit}`;
+ 
+// Combinamos para tener la búsquedas
+const fullUrl = `${api_url_info}?${queryParams}`;
+
+cargar(fullUrl);
 
 
 
