@@ -190,7 +190,7 @@ nav {
 #cardsNovedades .card-img-top,
 #libros .card-img-top {
   max-width: 150px;
-  height: auto;
+  max-height: auto;
 }
 
 #cardsNovedades .btn-warning,
