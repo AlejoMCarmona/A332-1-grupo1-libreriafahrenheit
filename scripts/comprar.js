@@ -1,12 +1,12 @@
-//URL DE LA API DE GOOGLE CON LA INFORMACIÓN DE LOS LIBROS
-const api_url_info = "https://www.googleapis.com/books/v1/volumes";
-// Parámetros iguales a todas las llamadas:
-const orderBy = "relevance";
-const lang = "en";
-const limit = "12";
-const parametros = `&orderBy=${orderBy}&langRestrict=${lang}&maxResults=${limit}`;
-
 cargarInformacionCompra();
+
+// Para simular una compra, se captura el envío del formulario para mostrar un mensaje de éxito una vez que todos los campos se completaron correctamente.
+window.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('formulario-compra').addEventListener("submit", function(e) {
+        e.preventDefault();
+        comprar();
+    })
+});
 
 /**
  * Función que se encarga de cargar la información necesaria para simular una compra.
@@ -15,7 +15,6 @@ cargarInformacionCompra();
 function cargarInformacionCompra() {
     const urlParams = new URLSearchParams(window.location.search);
     const busqueda = urlParams.get('q');
-    console.log(busqueda);
     
     if(typeof busqueda !== 'undefined' && busqueda !== null)
     {
@@ -35,40 +34,9 @@ function cargarInformacionCompra() {
     }
 }
 
-/**
- * Realiza una solicitud a la API de Google Books para obtener la información de un libro específico por su ID.
- * @param {string} id El ID único del libro que se desea obtener.
- * @returns {Promise<Object>} Una promesa que resuelve con los datos del libro obtenidos de la API.
- */
-async function obtenerLibro(id) {
-    try {
-        const urlLibro = `${api_url_info}/${id}`;
-        const respuesta = await fetch(urlLibro);
-        if (!respuesta.ok) {
-          throw "Ocurrió un error durante la llamada a la API";
-        }
-    
-        const libro = await respuesta.json();
-        return libro;
-      } catch (error) {
-        console.log(error);
-      }
-}
-
-/**
- * Muestra un mensaje en la página.
- * @returns {void}
- */
-function mostrarMensaje(mensaje) {
-    const mensajeHTML = convertirStringACodigoHTML(
-        `<h3 class="text-center mt-4">${mensaje}</h3>`
-    );
-    document.getElementById("compra").appendChild(mensajeHTML);
-}
-
   /**
- * Crea una tarjetas visuale para mostrar el libro en la interfaz.
- * @param {Array} libros Array de objetos que representan los libros a mostrar.
+ * Crea una tarjeta visual para mostrar el libro en la página de compras.
+ * @param {Object} libro a mostrar.
  * @returns {void}
  */
   function crearCard(libro) {
@@ -93,7 +61,7 @@ function mostrarMensaje(mensaje) {
 }
 
 /**
- * Mapea un objeto de libro obtenido de la API en un formato específico para la aplicación.
+ * Mapea un objeto de libro obtenido de la API en un formato específico para mostrarlo en la página de "compras".
  * @param {Object} libroAPI Objeto que representa un libro obtenido de la API.
  * @returns {Object} Objeto de libro mapeado en el formato deseado para la aplicación.
  */
@@ -119,39 +87,12 @@ function mappearLibro(libroAPI) {
 }
 
 /**
- * Convierte una cadena de texto que contiene código HTML en un objeto de documento HTML.
- * @param {string} html La cadena de texto que contiene el código HTML a convertir.
- * @param {boolean} trim Indica si se deben recortar los espacios en blanco del principio y el final del HTML (opcional, por defecto es true).
- * @returns {Document} Un objeto Document que representa el HTML convertido.
+ * Muestra un mensaje en la página.
+ * @returns {void}
  */
-function convertirStringACodigoHTML(html, trim = true) {
-    // Procesa el string a HTML.
-    html = trim ? html.trim() : html;
-    if (!html) return null;
-  
-    // Crea un nuevo template.
-    const template = document.createElement("template");
-    template.innerHTML = html;
-    const result = template.content.children;
-  
-    // Devuelve el HTML o un HTML Collection.
-    if (result.length === 1) return result[0];
-    return result;
+function mostrarMensaje(mensaje) {
+    const mensajeHTML = convertirStringACodigoHTML(
+        `<h3 class="text-center mt-4">${mensaje}</h3>`
+    );
+    document.getElementById("compra").appendChild(mensajeHTML);
 }
-
-/**
- * Simula la compra de un libro y muestra un mensaje de éxito.
- * @returns {void}.
- */
-function comprar() {
-    document.getElementById("compra").replaceChildren();
-    mostrarMensaje("¡Compra realizada con éxito!");
-}
-
-// Para simular una compra, se captura el envío del formulario para mostrar un mensaje de éxito una vez que todos los campos se completaron correctamente.
-window.addEventListener("DOMContentLoaded", function() {
-    document.getElementById('formulario-compra').addEventListener("submit", function(e) {
-        e.preventDefault();
-        comprar();
-    })
-});
