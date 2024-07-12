@@ -68,31 +68,13 @@
 
     <main>
         <section id="libros" class="my-5 w-75 mx-auto">
-            <h1 class="titulo-principal text-center fs-1 mt-4 fw-bold">Libros disponibles</h1>
-            <div class="container cartas-libros w-100">
-                <div class="dropdown my-4 text-sm-center text-start">
-                    <button class="btn btn-warning dropdown-toggle fs-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">Género</button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" onclick="llamado('romance')" href="#">Romance</a></li>
-                        <li><a class="dropdown-item" onclick="llamado('mistery')" href="#">Misterio</a></li>
-                        <li><a class="dropdown-item" onclick="llamado('science+fiction')" href="#">Ciencia ficción</a></li>
-                        <li><a class="dropdown-item" onclick="llamado('fantasy')" href="#">Fantasía</a></li>
-                        <li><a class="dropdown-item" onclick="llamado('contemporary')" href="#">Literatura contemporánea</a></li>
-                        <li><a class="dropdown-item" onclick="llamado('thriller')" href="#">Thriller</a></li>
-                        <li><a class="dropdown-item" onclick="llamado('historic')" href="#">Novela histórica</a></li>
-                        <li><a class="dropdown-item" onclick="llamado('young')" href="#">Literatura juvenil</a></li>
-                        <li><a class="dropdown-item" onclick="llamado('poetry')" href="#">Poesía</a></li>
-                        <li><a class="dropdown-item" onclick="llamado('biography')" href="#">Biografía</a></li>
-                    </ul>
-                </div>
+            <h1 class="titulo-principal text-center fs-1 mt-4 fw-bold">Resultados</h1>
+            <div class="container cartas-libros w-100 mt-4">
                 <div class="d-flex flex-row flex-wrap justify-content-around gap-4" id="cont_carga">
-
                 </div>
-
-                        <div class="espacio-vacio"></div>
-                        <div class="espacio-vacio"></div>
-                        <div class="espacio-vacio"></div>
-                
+                    <div class="espacio-vacio"></div>
+                    <div class="espacio-vacio"></div>
+                    <div class="espacio-vacio"></div>              
             </div>
         </section>
     </main>
@@ -148,11 +130,9 @@
             </div>
         </div>
     </footer>
-    <script src='./scripts/books.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-        <script src="./scripts/busqueda.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./scripts/resultados.js"></script>
+    <script src="./scripts/busqueda.js"></script>
 </body>
 
 </html>

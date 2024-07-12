@@ -71,119 +71,22 @@
             <h1 class="titulo-principal text-center fs-1 mt-4 fw-bold">Libros disponibles</h1>
             <div class="container cartas-libros w-100">
                 <div class="dropdown my-4 text-sm-center text-start">
-                    <button class="btn btn-warning dropdown-toggle fs-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">Género</button>
+                    <button id="boton-genero" class="btn btn-warning dropdown-toggle fs-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">Género</button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Romance</a></li>
-                        <li><a class="dropdown-item" href="#">Misterio</a></li>
-                        <li><a class="dropdown-item" href="#">Ciencia ficción</a></li>
-                        <li><a class="dropdown-item" href="#">Fantasía</a></li>
-                        <li><a class="dropdown-item" href="#">Literatura contemporánea</a></li>
-                        <li><a class="dropdown-item" href="#">Thriller</a></li>
-                        <li><a class="dropdown-item" href="#">Novela histórica</a></li>
-                        <li><a class="dropdown-item" href="#">Literatura juvenil</a></li>
-                        <li><a class="dropdown-item" href="#">Poesía</a></li>
-                        <li><a class="dropdown-item" href="#">Biografía</a></li>
+                        <li><a class="dropdown-item active" onclick="cambiarGenero('romance')" href="#">Romance</a></li>
+                        <li><a class="dropdown-item" onclick="cambiarGenero('science:fiction')" href="#">Ciencia ficción</a></li>
+                        <li><a class="dropdown-item" onclick="cambiarGenero('fantasy')" href="#">Fantasía</a></li>
+                        <li><a class="dropdown-item" onclick="cambiarGenero('drama')" href="#">Drama</a></li>
+                        <li><a class="dropdown-item" onclick="cambiarGenero('young:fiction')" href="#">Juveniles</a></li>
+                        <li><a class="dropdown-item" onclick="cambiarGenero('poetry')" href="#">Poesía</a></li>
+                        <li><a class="dropdown-item" onclick="cambiarGenero('biography')" href="#">Biografías</a></li>
                     </ul>
                 </div>
-                <div class="d-flex flex-row flex-wrap justify-content-around gap-4">
-                        <div class="card pt-3 mt-md-0 mt-4 animate__animated animate__headShake">
-                            <img src="images/libros_venta/9DeNoviembre.jpg" class="card-img-top mx-auto" alt="...">
-                            <div class="informacion-libro mx-auto">
-                                <div class="card-body">
-                                    <h5 class="card-title">9 de Noviembre</h5>
-                                    <p class="card-text">Collen Hoover</p>
-                                </div>
-                            </div>
-                            <div class="mt-auto mb-3 text-center">
-                                <a href="#" class="btn btn-warning fs-6 w-75">Comprar</a>
-                            </div>
-                        </div>
-                        <div class="card pt-3 mt-md-0 mt-4 animate__animated animate__headShake">
-                            <img src="images/libros_venta/Pica.jpg" class="card-img-top mx-auto" alt="...">
-                            <div class="informacion-libro mx-auto d-flex flex-column">
-                                <div class="card-body">
-                                    <h5 class="card-title">¿Y a ti qué te pica?</h5>
-                                    <p class="card-text">Megan Maxwell</p>
-                                </div>
-                            </div>
-                            <div class="mt-auto mb-3 text-center">
-                                <a href="#" class="btn btn-warning fs-6 w-75">Comprar</a>
-                            </div>
-                        </div>
-                        <div class="card pt-3 mt-md-0 mt-4 animate__animated animate__headShake">
-                            <img src="images/libros_venta/TodosLosLugares.jpg" class="card-img-top mx-auto" alt="...">
-                            <div class="informacion-libro mx-auto">
-                                <div class="card-body">
-                                    <h5 class="card-title">Todos los lugares que mantuvimos en secreto</h5>
-                                    <p class="card-text">Inma Rubiales</p>
-                                    <a href="#" class="btn btn-warning fs-6 w-100">Comprar</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card pt-3 mt-md-0 mt-4 animate__animated animate__headShake">
-                            <img src="images/libros_venta/LoQueLaNieveSusurraAlCaer.jpg" class="card-img-top mx-auto" alt="...">
-                            <div class="informacion-libro mx-auto">
-                                <div class="card-body">
-                                    <h5 class="card-title">Lo que la nieve susurra al caer</h5>
-                                    <p class="card-text">María Martinez</p>
-                                </div>
-                            </div>
-                            <div class="mt-auto mb-3 text-center">
-                                <a href="#" class="btn btn-warning fs-6 w-75">Comprar</a>
-                            </div>
-                        </div>
-                        <div class="card pt-3 mt-md-0 mt-4 animate__animated animate__headShake">
-                            <img src="images/libros_venta/NoTeOlvidare.jpg" class="card-img-top mx-auto" alt="...">
-                            <div class="informacion-libro mx-auto">
-                                <div class="card-body">
-                                    <h5 class="card-title">No te olvidaré</h5>
-                                    <p class="card-text">Collen Hoover</p>
-                                </div>
-                            </div>
-                            <div class="mt-auto mb-3 text-center">
-                                <a href="#" class="btn btn-warning fs-6 w-75">Comprar</a>
-                            </div>
-                        </div>
-                        <div class="card pt-3 mt-md-0 mt-4 animate__animated animate__headShake">
-                            <img src="images/libros_venta/TeEsperoEnElFinDelMundo.jpg" class="card-img-top mx-auto" alt="...">
-                            <div class="informacion-libro mx-auto">
-                                <div class="card-body">
-                                    <h5 class="card-title">Te espero en el fin del mundo</h5>
-                                    <p class="card-text">Andrea Longarela</p>
-                                </div>
-                            </div>
-                            <div class="mt-auto mb-3 text-center">
-                                <a href="#" class="btn btn-warning fs-6 w-75">Comprar</a>
-                            </div>
-                        </div>
-                        <div class="card pt-3 mt-md-0 mt-4 animate__animated animate__headShake">
-                            <img src="images/libros_venta/GenteQueConocemos.jpg" class="card-img-top mx-auto" alt="...">
-                            <div class="informacion-libro mx-auto">
-                                <div class="card-body">
-                                    <h5 class="card-title">Gente que conocemos en vacaciones</h5>
-                                    <p class="card-text">Emily Henry</p>
-                                </div>
-                            </div>
-                            <div class="mt-auto mb-3 text-center">
-                                <a href="#" class="btn btn-warning fs-6 w-75">Comprar</a>
-                            </div>
-                        </div>
-                        <div class="card pt-3 mt-md-0 mt-4 animate__animated animate__headShake">
-                            <img src="images/libros_venta/ElPerfumeDelRey.jpg" class="card-img-top mx-auto" alt="...">
-                            <div class="informacion-libro mx-auto">
-                                <div class="card-body">
-                                    <h5 class="card-title">El perfume del rey</h5>
-                                    <p class="card-text">Karine Bernal Lobo</p>
-                                </div>
-                            </div>
-                            <div class="mt-auto mb-3 text-center">
-                                <a href="#" class="btn btn-warning fs-6 w-75">Comprar</a>
-                            </div>
-                        </div>
-                        <div class="espacio-vacio"></div>
-                        <div class="espacio-vacio"></div>
-                        <div class="espacio-vacio"></div>
+                <div class="d-flex flex-row flex-wrap justify-content-around gap-4" id="cont_carga">
                 </div>
+                    <div class="espacio-vacio"></div>
+                    <div class="espacio-vacio"></div>
+                    <div class="espacio-vacio"></div>              
             </div>
         </section>
     </main>
@@ -239,10 +142,9 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-        <script src="./scripts/busqueda.js"></script>
+    <script src='./scripts/libros.js'></script>
+    <script src='./scripts/busqueda.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>
