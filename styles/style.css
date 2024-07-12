@@ -167,6 +167,7 @@ nav {
   color: var(--color-secundario);
   font-size: 1.25rem;
   font-family: var(--fuente-principal);
+  padding-top: 1rem;
 }
 
 #cardsNovedades .card-subtitle,
@@ -220,7 +221,7 @@ nav {
 #registro span {
   color: var(--color-secundario);
 }
-#tituloRegistro{
+#tituloRegistro {
   color: var(--color-principal);
 }
 form {
