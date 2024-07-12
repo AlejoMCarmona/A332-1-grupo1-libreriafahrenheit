@@ -70,7 +70,7 @@ async function obtenerLibrosPorGenero(generoSeleccionado) {
     }
 }
 
-  /**
+/**
  * Crea tarjetas visuales para mostrar los libros en la interfaz.
  * @param {Array} libros Array de objetos que representan los libros a mostrar.
  * @returns {void}
@@ -88,13 +88,24 @@ function crearCards(libros) {
                         </div>
                     </div>
                     <div class="mt-auto mb-3 text-center">
-                        <a href="#" class="btn btn-warning fs-6 w-75">Comprar</a>
+                        <a href="#" class="btn btn-warning fs-6 w-75" onclick="comprar('${libroMappeado.id}')">Comprar</a>
                     </div>
                 </div>`
           );
     
           document.getElementById("cont_carga").appendChild(cardLibro);
       });
+}
+
+/**
+ * Redirige a una nueva página que simula una compra.
+ * @returns {void} Un objeto Document que representa el HTML convertido.
+ */
+function comprar(id) {
+    console.log(id);
+    if(id.length > 0) {
+        window.location.href = `comprar.html?q=${id}`;
+    }
 }
 
 /**
