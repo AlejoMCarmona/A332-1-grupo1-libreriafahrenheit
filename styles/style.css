@@ -167,6 +167,7 @@ nav {
   color: var(--color-secundario);
   font-size: 1.25rem;
   font-family: var(--fuente-principal);
+  padding-top: 1rem;
 }
 
 #cardsNovedades .card-subtitle,
@@ -225,15 +226,22 @@ nav {
 
 /************* ESTILOS PARA EL FORM *************/
 
+#registro h2 {
+  font-family: var(--fuente-principal);
+  color: var(--color-principal);
+}
+
+#registroExitoso h2 {
+  font-family: var(--fuente-principal);
+  color: var(--color-principal);
+  font-size: 1.5rem;
+}
+
 #registro {
-  display: flex;
   justify-content: center;
 }
 #registro span {
   color: var(--color-secundario);
-}
-#tituloRegistro{
-  color: var(--color-principal);
 }
 form {
   width: 50%;
@@ -264,7 +272,7 @@ td {
 }
 
 .text_box {
-  border-radius: 2rem;
+  border-radius: .4rem;
   border-color: var(--color-secundario);
   font-family: var(--fuente-secundaria);
   color: var(--color-terciario);
@@ -363,7 +371,7 @@ td {
   object-fit: cover;
 }
 
-#merch h1 {
+#merch h2 {
   text-align: center;
   font-family: var(--fuente-principal);
   color: var(--color-principal);

@@ -51,21 +51,22 @@ function crearCards(libros) {
         let libroMappeado = mappearLibro(libro);
         let cardLibro = convertirStringACodigoHTML(
             `<div class="card pt-3 mt-md-0 mt-4 animate__animated animate__headShake">
-                    <img src="${libroMappeado.urlImagen}" class="card-img-top mx-auto" alt="...">
-                    <div class="informacion-libro mx-auto d-flex flex-column">
-                        <div class="card-body">
-                            <h5 class="card-title">${libroMappeado.titulo}</h5>
-                            <p class="card-text">${libroMappeado.autores}</p>
-                        </div>
+                <img src="${libroMappeado.urlImagen}" class="card-img-top mx-auto" alt="...">
+                <div class="informacion-libro mx-auto d-flex flex-column">
+                    <div class="card-body">
+                        <h5 class="card-title">${libroMappeado.titulo}</h5>
+                        <p class="card-text">${libroMappeado.autores}</p>
                     </div>
-                    <div class="mt-auto mb-3 text-center">
-                        <a href="#" class="btn btn-warning fs-6 w-75" onclick="comprar('${libroMappeado.id}')">Comprar</a>
-                    </div>
-                </div>`
-          );
+                </div>
+                <div class="mt-auto mb-3 text-center">
+                    <a href="#" class="btn btn-warning fs-6 w-75" onclick="comprar('${libroMappeado.id}')">Comprar</a>
+                </div>
+            </div>`
+        );
     
-          document.getElementById("cont_carga").appendChild(cardLibro);
-      });
+        document.getElementById("cont_carga").appendChild(cardLibro);
+    });
+    console.log("aqui");
 }
 
 /**
