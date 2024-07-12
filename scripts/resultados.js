@@ -1,6 +1,5 @@
 //URL DE LA API DE GOOGLE CON LA INFORMACIÓN DE LOS LIBROS
 const api_url_info = "https://www.googleapis.com/books/v1/volumes";
-
 // Parámetros iguales a todas las llamadas:
 const orderBy = "relevance";
 const lang = "en";
@@ -34,7 +33,7 @@ function realizarBusqueda() {
     }
     else
     {
-        window.location.replace("prueba.html");
+        window.location.replace("libros.html");
     }
 }
 
@@ -87,7 +86,7 @@ async function obtenerLibrosPorNombre(tituloBuscado) {
                     </div>
                 </div>
                 <div class="mt-auto mb-3 text-center">
-                    <a href="#" class="btn btn-warning fs-6 w-75">Comprar</a>
+                    <a href="#" class="btn btn-warning fs-6 w-75" onclick="comprar('${libroMappeado.id}')">Comprar</a>
                 </div>
             </div>`
         );
@@ -129,4 +128,15 @@ function convertirStringACodigoHTML(html, trim = true) {
   // Devuelve el HTML o un HTML Collection.
   if (result.length === 1) return result[0];
   return result;
+}
+
+/**
+ * Redirige a una nueva página que simula una compra.
+ * @returns {void} Un objeto Document que representa el HTML convertido.
+ */
+function comprar(id) {
+    console.log(id);
+    if(id.length > 0) {
+        window.location.href = `comprar.html?q=${id}`;
+    }
 }
