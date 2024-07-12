@@ -243,9 +243,6 @@ nav {
 #registro span {
   color: var(--color-secundario);
 }
-#tituloRegistro {
-  color: var(--color-principal);
-}
 form {
   width: 50%;
   font-family: var(--fuente-principal);
@@ -275,7 +272,7 @@ td {
 }
 
 .text_box {
-  border-radius: 2rem;
+  border-radius: .4rem;
   border-color: var(--color-secundario);
   font-family: var(--fuente-secundaria);
   color: var(--color-terciario);

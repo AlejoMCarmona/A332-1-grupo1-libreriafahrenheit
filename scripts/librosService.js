@@ -67,3 +67,26 @@ async function obtenerLibro(id) {
       console.log(error);
     }
 }
+
+/**
+ * Función asincrónica para obtener libros considerados como "novedades".
+ * @param {string} palabraClave - Palabra clave para la búsqueda de libros.
+ * @param {number} cantidad - Cantidad máxima de resultados a obtener.
+ * @returns {Promise<Object[]>} - Promesa que resuelve en un arreglo de objetos con información de libros.
+ */
+async function obtenerNovedades(palabraClave, cantidad) {
+  try {
+    const parametros = `&orderBy=newest&printType=books&langRestrict=${lang}&maxResults=${cantidad}`;
+    const urlNovedades = `${api_url_info}?q=${palabraClave}${parametros}`;
+    console.log(urlNovedades);
+    const respuesta = await fetch(urlNovedades);
+    if (!respuesta.ok) {
+      throw "Ocurrió un error durante la llamada a la API";
+    }
+
+    const libros = await respuesta.json();
+    return libros;
+  } catch (error) {
+    console.log(error);
+  }
+}
