@@ -187,11 +187,17 @@ nav {
 #cardsNovedades .imageContainer {
   height: 225px;
 }
-#cardsNovedades .card-img-top,
+#cardsNovedades .card-img-top {
+  max-width: 150px;
+  max-height: auto;
+}
+
 #libros .card-img-top {
   max-width: 150px;
-  height: auto;
+  min-height: 100px;
+  max-height: 210px;
 }
+
 
 #cardsNovedades .btn-warning,
 #libros .btn-warning,

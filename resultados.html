@@ -18,7 +18,7 @@
         rel="stylesheet">
 </head>
 
-<body class="vh-85">
+<body>
     <header>
         <nav class="navbar-nav navbar-expand-md pt-4">
             <div class="container-fluid">
@@ -66,82 +66,72 @@
         </nav>
     </header>
 
-    <div class="d-flex flex-column h-100">
-        <main class="my-5">
-            <section id="login" class="container my-5">
-                <h1 class="fs-1 text-center titulo-principal mb-5 fw-bold">Iniciar sesión</h1>
-                <form class="mx-auto">
-                    <div class="mb-3">
-                      <label for="inputEmail" class="form-label text_box ps-0">Email</label>
-                      <input type="email" class="form-control" id="inputEmail" aria-describedby="email">
-                    </div>
-                    <div class="mb-3">
-                      <label for="inputPassword" class="form-label text_box ps-0">Contraseña</label>
-                      <input type="password" class="form-control" id="inputPassword">
-                    </div>
-                    <div class="mb-3 form-check">
-                      <input type="checkbox" class="form-check-input" id="check">
-                      <label class="form-check-label text_box" for="check">Recordarme</label>
-                    </div>
-                    <button type="submit" class="btn btn-warning fs-6 w-100">Iniciar sesión</button>
-                  </form> 
-            </section>
-        </main>
-    
-        <footer id="footer" class="footer mt-auto py-3">
-            <div class="container">
-                <div class="row row-cols-3 justify-content-center mt-2 mt-md-0">
-                    <div class="col-md-4 col-12 text-center text-md-start">
-                        <h4 class="fs-3">MENU</h4>
-                        <div class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="libros.html" class="nav-link p-0 text-white">LIBROS</a></li>
-                            <li class="nav-item mb-2"><a href="index.html#novedades" class="nav-link p-0 text-white">NOVEDADES</a></li>
-                            <li class="nav-item mb-2"><a href="index.html#merch" class="nav-link p-0 text-white">MERCHANDISING</a></li>
-                            <li class="nav-item mb-2"><a href="preguntas-frecuentes.html" class="nav-link p-0 text-white">PREGUNTAS FRECUENTES</a>
-                            </li>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-12 text-center mt-4 mt-md-0">
-                        <h4 class="fs-4">CONTACTO</h4>
-                        <div class="nav flex-column">
-                            <li class="nav-item mb-2">
-                                <a href="#">
-                                    <i class="bi bi-envelope text-white"> farenheit@gmail.com</i>
-                                </a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#">
-                                    <i class="bi bi-telephone text-white"> +549112345678</i>
-                                </a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#">
-                                    <i class="bi bi-pin-map-fill text-white"> Av. Corrientes 2345</i>
-                                </a>
-                            </li>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-12 text-md-end text-center mt-4 mt-md-0">
-                        <h4 class="fs-4">SEGUINOS</h4>
-                        <div class="logos">
-                            <a href="#">
-                                <i class="bi bi-instagram text-white"></i>
-                            </a>
-                            <a href="#">
-                                <i class="bi bi-facebook text-white"></i>
-                            </a>
-                            <a href="#">
-                                <i class="bi bi-twitter-x text-white"></i>
-                            </a>
-                        </div>
-    
+    <main>
+        <section id="libros" class="my-5 w-75 mx-auto">
+            <h1 class="titulo-principal text-center fs-1 mt-4 fw-bold">Resultados</h1>
+            <div class="container cartas-libros w-100 mt-4">
+                <div class="d-flex flex-row flex-wrap justify-content-around gap-4" id="cont_carga">
+                </div>
+                    <div class="espacio-vacio"></div>
+                    <div class="espacio-vacio"></div>
+                    <div class="espacio-vacio"></div>              
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer mt-auto py-3">
+        <div class="container">
+            <div class="row row-cols-3 justify-content-center mt-2 mt-md-0">
+                <div class="col-md-4 col-12 text-center text-md-start">
+                    <h4 class="fs-3">MENU</h4>
+                    <div class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="libros.html" class="nav-link p-0 text-white">LIBROS</a></li>
+                        <li class="nav-item mb-2"><a href="index.html#novedades" class="nav-link p-0 text-white">NOVEDADES</a></li>
+                        <li class="nav-item mb-2"><a href="index.html#merch" class="nav-link p-0 text-white">MERCHANDISING</a></li>
+                        <li class="nav-item mb-2"><a href="preguntas-frecuentes.html" class="nav-link p-0 text-white">PREGUNTAS FRECUENTES</a>
+                        </li>
                     </div>
                 </div>
+                <div class="col-md-4 col-12 text-center mt-4 mt-md-0">
+                    <h4 class="fs-4">CONTACTO</h4>
+                    <div class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#">
+                                <i class="bi bi-envelope text-white"> farenheit@gmail.com</i>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#">
+                                <i class="bi bi-telephone text-white"> +549112345678</i>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#">
+                                <i class="bi bi-pin-map-fill text-white"> Av. Corrientes 2345</i>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 text-md-end text-center mt-4 mt-md-0">
+                    <h4 class="fs-4">SEGUINOS</h4>
+                    <div class="logos">
+                        <a href="#">
+                            <i class="bi bi-instagram text-white"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-facebook text-white"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-twitter-x text-white"></i>
+                        </a>
+                    </div>
+
+                </div>
             </div>
-        </footer>
-    </div>
-    
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./scripts/resultados.js"></script>
     <script src="./scripts/busqueda.js"></script>
 </body>
 

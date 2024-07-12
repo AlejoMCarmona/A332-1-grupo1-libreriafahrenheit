@@ -36,10 +36,10 @@
                     <div class="col-md-8 col-12 mt-md-0 mt-4 mb-md-0 mb-2">
                         <div class="w-md-75 w-100 mx-auto input-group" role="search">
                             <input class="form-control searchbar rounded-pill-start py-md-2 py-1" type="search"
-                                placeholder="¿Qué estás buscando?" aria-label="Search">
+                                placeholder="¿Qué estás buscando?" aria-label="Search" id="buscador">
                             <span>
                                 <button class="btn bg-white border-start-0 border py-md-2 py-1 rounded-pill-end"
-                                    type="button">
+                                    type="button" onclick="buscar()">
                                     <i class="bi bi-search"></i>
                                 </button>
                             </span>
@@ -414,9 +414,8 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./scripts/busqueda.js"></script>
 </body>
 
 </html>
