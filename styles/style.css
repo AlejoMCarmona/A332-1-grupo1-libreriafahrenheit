@@ -214,8 +214,18 @@ nav {
 
 /************* ESTILOS PARA EL FORM *************/
 
+#registro h2 {
+  font-family: var(--fuente-principal);
+  color: var(--color-principal);
+}
+
+#registroExitoso h2 {
+  font-family: var(--fuente-principal);
+  color: var(--color-principal);
+  font-size: 1.5rem;
+}
+
 #registro {
-  display: flex;
   justify-content: center;
 }
 #registro span {
@@ -352,7 +362,7 @@ td {
   object-fit: cover;
 }
 
-#merch h1 {
+#merch h2 {
   text-align: center;
   font-family: var(--fuente-principal);
   color: var(--color-principal);
