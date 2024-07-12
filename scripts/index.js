@@ -1,20 +1,20 @@
-$(document).ready(function () {
-  $("#loading-spinner").show();
-
-  const url = `https://openlibrary.org/search.json?q=language%3Aspa&sort=rating`;
-
-  $.getJSON(url, function (data) {
-    const books = data.docs.slice(0, 4);
-    $("#loading-spinner").hide();
-    books.forEach((book, index) => {
-      const title = book.title;
-      const author = book.author_name
-        ? book.author_name.join(", ")
-        : "Autor Desconocido";
-      const coverId = book.cover_i;
-      const coverUrl = coverId
-        ? `https://covers.openlibrary.org/b/id/${coverId}-L.jpg`
-        : "https://via.placeholder.com/150";
+function poblarNovedades() {
+  const url = "https://www.googleapis.com/books/v1/volumes";
+  const params = new URLSearchParams({
+    langRestrict: "es",
+    orderBy: "newest",
+    printType: "books",
+    maxResults: 4,
+    q: "-intitle:'gay'", // No pregunte porque esta esto, si saco esto rompe
+  });
+  console.log(params.toString());
+  $.getJSON(`${url}?${params.toString()}`, function (data) {
+    console.log(data);
+    for (let i = 0; i < 4; i++) {
+      let title = data.items[i].volumeInfo.title;
+      console.log(data.items[i].volumeInfo.authors);
+      let author = data.items[i].volumeInfo.authors[0];
+      let coverUrl = data.items[i].volumeInfo.imageLinks.thumbnail;
 
       $("#book-cards").append(`
                 <div class="col-md-3">
@@ -29,6 +29,11 @@ $(document).ready(function () {
                   </div>
                 </div>
             `);
-    });
+    }
+    $("#loading-spinner").hide();
   });
+}
+
+$(document).ready(function () {
+  poblarNovedades();
 });
