@@ -70,10 +70,10 @@
         <section id="compra" class="my-5">
             <div class="container mx-auto w-100">
                 <div class="row justify-content-center">
-                    <div id="cont-card-compra" class="col-md-4">
+                    <div id="cont-card-compra" class="col-lg-6">
                         <!--Libro a comprar-->
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-6 mt-lg-0 mt-5">
                         <div class="container">
                             <form id="formulario-compra" class="w-100">
                                 <div class="mb-3">
@@ -90,7 +90,7 @@
                                 </div>
                                 <div class="row mb-3">
                                   <div class="col">
-                                    <label for="expiracion" class="form-label">Fecha de Expiración</label>
+                                    <label for="expiracion" class="form-label">Expiración</label>
                                     <input type="text" class="form-control" id="expiracion" placeholder="MM/AA" pattern="\d{2}/\d{2}" required>
                                     <div class="invalid-feedback">
                                         Por favor ingrese una fecha con el formato MM/AA válido.
@@ -101,7 +101,7 @@
                                     <input type="text" class="form-control" id="cvv" placeholder="CVV" pattern="\d{3}" required>
                                   </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary button-form text-uppercase">Realizar Compra</button>
+                                <button type="submit" class="btn btn-primary button-form text-uppercase mt-2">Realizar Compra</button>
                               </form>
                         </div>        
                     </div>
@@ -161,10 +161,10 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src='./scripts/librosService.js'></script>
     <script src='./scripts/utils.js'></script>
     <script src='./scripts/comprar.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>
