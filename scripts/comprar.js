@@ -104,6 +104,7 @@ function mostrarMensaje(mensaje) {
     const mensajeHTML = convertirStringACodigoHTML(
         `<h3 class="text-center titulo-principal mb-5">${mensaje}</h3>`
     );
+    document.getElementById("compra").replaceChildren();
     document.getElementById("compra").appendChild(mensajeHTML);
 }
 
