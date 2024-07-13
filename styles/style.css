@@ -156,22 +156,29 @@ nav {
 }
 
 #cardsNovedades .card,
-#libros .card {
+#libros .card,
+#cont-card-compra .card {
   --bs-card-bg: var(--color-terciario);
   --bs-card-border-color: none;
   width: 17rem;
 }
 
 #cardsNovedades .card-title,
-#libros .card-title {
+#libros .card-title,
+#cont-card-compra .card-title {
   color: var(--color-secundario);
   font-size: 1.25rem;
   font-family: var(--fuente-principal);
   padding-top: 1rem;
 }
 
+#cont-card-compra .card-title {
+  font-size: 2rem;
+}
+
 #cardsNovedades .card-subtitle,
-#libros .card-subtitle {
+#libros .card-subtitle,
+#cont-card-compra .card-subtitle {
   color: var(--color-fondo);
   font-weight: bold;
   font-size: 1rem;
@@ -179,7 +186,8 @@ nav {
 }
 
 #cardsNovedades .card-text,
-#libros .card-text {
+#libros .card-text,
+#cont-card-compra .card-text {
   color: var(--color-fondo);
   font-size: 0.75rem;
   font-family: var(--fuente-secundaria);
@@ -280,7 +288,7 @@ td {
   padding: 2px 2px 2px 10px;
   box-sizing: border-box;
 }
-#button-form {
+.button-form {
   padding: 0.3rem 1rem;
   background-color: var(--color-secundario);
   color: var(--color-principal);
@@ -289,10 +297,10 @@ td {
   width: 100%;
   border: none;
   box-sizing: border-box;
-  border-radius: 2rem;
   transition: background-color 0.3s ease;
+  font-family: var(--fuente-terciaria);
 }
-#button-form:hover {
+.button-form:hover {
   background-color: var(--color-principal);
   color: var(--color-secundario);
 }
@@ -428,3 +436,20 @@ td {
 }
 
 /************* FIN DE LOS ESTILOS PARA LA PÁGINA DE LOGIN *************/
+
+/************* ESTILOS PARA LA PÁGINA DE COMPRA *************/
+
+#cont-card-compra .precio {
+  font-size: 1.5rem;
+  color: var(--color-secundario);
+}
+
+#formulario-compra label {
+  font-family: var(--fuente-principal);
+}
+
+#formulario-compra input {
+  font-family: var(--fuente-secundaria);
+}
+
+/************* FIN DE LOS ESTILOS PARA LA PÁGINA DE COMPRA *************/

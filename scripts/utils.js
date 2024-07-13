@@ -24,7 +24,6 @@ function convertirStringACodigoHTML(html, trim = true) {
  * @returns {void} Un objeto Document que representa el HTML convertido.
  */
 function comprar(id) {
-    console.log(id);
     if(id.length > 0) {
         window.location.href = `comprar.html?q=${id}`;
     }
@@ -36,7 +35,6 @@ function comprar(id) {
  */
 function buscar() {
     valor = document.getElementById('buscador').value;
-    console.log(valor);
     if(valor.length > 0) {
         window.location.href = `resultados.html?q=${valor}`;
     }

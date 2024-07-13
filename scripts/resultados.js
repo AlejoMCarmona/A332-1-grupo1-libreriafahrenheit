@@ -52,8 +52,8 @@ function mostrarMensaje(mensaje) {
                 <img src="${libroMappeado.urlImagen}" class="card-img-top img-responsive mx-auto" alt="...">
                 <div class="informacion-libro mx-auto d-flex flex-column">
                     <div class="card-body">
-                        <h5 class="card-title">${libroMappeado.titulo}</h5>
-                        <p class="card-text">${libroMappeado.autores}</p>
+                        <h5 class="card-title text-center">${libroMappeado.titulo}</h5>
+                        <p class="card-text text-center">${libroMappeado.autores}</p>
                     </div>
                 </div>
                 <div class="mt-auto mb-3 text-center">
@@ -75,7 +75,7 @@ function mappearLibro(libroAPI) {
     return {
       id: libroAPI.id,
       titulo: libroAPI.volumeInfo.title,
-      autores: libroAPI.volumeInfo.authors != undefined ? libroAPI.volumeInfo.authors.toString() : "Anonimo",
+      autores: libroAPI.volumeInfo.authors != undefined ? libroAPI.volumeInfo.authors.join(', ') : "Anonimo",
       urlImagen: libroAPI.volumeInfo.imageLinks != null ? libroAPI.volumeInfo.imageLinks.thumbnail : "../images/no_image.jpg",
     };
 }
