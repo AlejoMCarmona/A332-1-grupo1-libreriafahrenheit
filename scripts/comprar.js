@@ -4,7 +4,7 @@ cargarInformacionCompra();
 window.addEventListener("DOMContentLoaded", function() {
     document.getElementById('formulario-compra').addEventListener("submit", function(e) {
         e.preventDefault();
-        comprar();
+        simularCompra();
     })
 });
 
@@ -47,10 +47,10 @@ function cargarInformacionCompra() {
             <img src="${libroMappeado.urlImagen}" class="card-img-top mx-auto" alt="...">
             <div class="informacion-libro mx-auto d-flex flex-column">
                 <div class="card-body">
-                    <h5 class="card-title">${libroMappeado.titulo}</h5>
-                    <p class="card-text">${libroMappeado.autores}</p>
-                    <p class="card-text">${libroMappeado.descripcion}</p>
-                    <p class="card-text">${libroMappeado.precio}</p>
+                    <h5 class="card-title text-center">${libroMappeado.titulo}</h5>
+                    <p class="card-text text-center">${libroMappeado.autores}</p>
+                    <p class="card-text text-center">${libroMappeado.descripcion}</p>
+                    <p class="card-text precio text-center">${libroMappeado.precio}</p>
                 </div>
             </div>
         </div>
@@ -66,24 +66,34 @@ function cargarInformacionCompra() {
  * @returns {Object} Objeto de libro mapeado en el formato deseado para la aplicación.
  */
 function mappearLibro(libroAPI) {
-    console.log(libroAPI.saleInfo);
     let precio = "";
     let moneda = ""; 
     if (libroAPI.saleInfo.saleability == "FOR_SALE") {
         precio = libroAPI.saleInfo.listPrice.amount;
         moneda = libroAPI.saleInfo.listPrice.currencyCode;
     } else {
-        precio = Math.floor(Math.random() * 21);
+        precio = Math.floor(Math.random() * 20) + 1;
         moneda = "USD";
     }
     return {
       id: libroAPI.id,
       titulo: libroAPI.volumeInfo.title,
-      descripcion: libroAPI.volumeInfo.description != undefined ? libroAPI.volumeInfo.description : "Este libro no posee descripción. Lo sentimos :(",
+      descripcion: libroAPI.volumeInfo.description != undefined ? eliminarSecuenciasEscape(libroAPI.volumeInfo.description) : "Este libro no posee descripción. Lo sentimos.",
       precio: "$" + precio + "" + moneda,
-      autores: libroAPI.volumeInfo.authors != undefined ? libroAPI.volumeInfo.authors.toString() : "Anonimo",
+      autores: libroAPI.volumeInfo.authors != undefined ? libroAPI.volumeInfo.authors.join(', ') : "Anonimo",
       urlImagen: libroAPI.volumeInfo.imageLinks != null ? libroAPI.volumeInfo.imageLinks.thumbnail : "../images/no_image.jpg",
     };
+}
+
+/**
+ * Elimina los tags <p> y </p> de un texto.
+ * 
+ * @param {string} texto - El texto que puede contener los tags.
+ * @returns {string} El texto modificado sin los tags.
+ */
+function eliminarSecuenciasEscape(texto) {
+    const regex = /<\s*\/?\s*p\s*[^>]*>/gi;
+    return texto.replace(regex,'');
 }
 
 /**
@@ -92,7 +102,16 @@ function mappearLibro(libroAPI) {
  */
 function mostrarMensaje(mensaje) {
     const mensajeHTML = convertirStringACodigoHTML(
-        `<h3 class="text-center mt-4">${mensaje}</h3>`
+        `<h3 class="text-center titulo-principal mb-5">${mensaje}</h3>`
     );
     document.getElementById("compra").appendChild(mensajeHTML);
+}
+
+/**
+ * Simula la compra de un libro y muestra un mensaje de éxito.
+ * @returns {void}.
+ */
+function simularCompra() {
+    document.getElementById("compra").replaceChildren();
+    mostrarMensaje("¡Compra realizada con éxito!");
 }

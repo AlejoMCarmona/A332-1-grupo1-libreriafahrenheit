@@ -35,7 +35,6 @@ async function obtenerLibrosPorGenero(generoSeleccionado) {
 async function obtenerLibrosPorNombre(tituloBuscado) {
     try {
       const urlConTitulo = `${api_url_info}?q=intitle:${tituloBuscado}${parametros}`;
-      console.log(urlConTitulo)
       const respuesta = await fetch(urlConTitulo);
       if (!respuesta.ok) {
         throw "Ocurrió un error durante la llamada a la API";
@@ -78,7 +77,7 @@ async function obtenerNovedades(palabraClave, cantidad) {
   try {
     const parametros = `&orderBy=newest&printType=books&langRestrict=${lang}&maxResults=${cantidad}`;
     const urlNovedades = `${api_url_info}?q=${palabraClave}${parametros}`;
-    console.log(urlNovedades);
+    
     const respuesta = await fetch(urlNovedades);
     if (!respuesta.ok) {
       throw "Ocurrió un error durante la llamada a la API";
